@@ -54,3 +54,4 @@ dkms.conf
 # Development
 .devcontainer
 .vscode
+*.csv

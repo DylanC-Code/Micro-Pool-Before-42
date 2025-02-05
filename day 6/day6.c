@@ -45,11 +45,33 @@ void set_name(struct Person *person)
     }
 }
 
+void set_age(struct Person *person)
+{
+    int user_input;
+
+    printf("Enter your age: ");
+    scanf("%d", &user_input);
+
+    if (user_input <= 0)
+    {
+        printf("The age must be greater than 0.\n");
+        return set_age(person);
+    }
+    else if (user_input > 110)
+    {
+        printf("There is no chance.\n");
+        return set_age(person);
+    }
+
+    person->age = user_input;
+}
+
 int main()
 {
     struct Person person;
 
     set_name(&person);
+    set_age(&person);
 
     return 0;
 }

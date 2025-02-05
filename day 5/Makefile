@@ -1,5 +1,5 @@
 all: day5.exe
-	./day5.exe
+	./day5.exe "Jambon beurre cornichon"
 
 day5.exe: day5.o
 	gcc -o day5.exe day5.o
